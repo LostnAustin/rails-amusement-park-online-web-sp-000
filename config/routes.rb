@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/users/new', to: 'users#new'
+  root 'static#home'
+
   
-  get '/login/', to: 'sessions#new'
-  post '/login/', to: 'sessions#create'
+  get '/users/new', to: 'users#new', as: 'new_user'
   
+  
+  get '/signin', to: 'sessions#new',  as: 'signin'
+  post '/session', to: 'session#create', as: 'session'
+  delete '/session', to: 'sesssion#destroy'
+
 end

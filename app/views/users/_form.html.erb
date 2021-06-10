@@ -1,4 +1,6 @@
+
 <%= form_for @user do |f| %>
+
     
     <div>    
         <%= f.label :name %>
@@ -7,23 +9,38 @@
 
     <div>
         <%= f.label :height %>
+        <%= f.number_field :height %>
+    </div>
+
+     <div>
+        <%= f.label :nausea %>
+        <%= f.number_field :nausea %>
     </div>
 
     <div>
         <%= f.label :happiness %>
-    </div>
-
-    <div>
-        <%= f.label :nausea %>
+         <%= f.number_field :happiness %>
     </div>
 
     <div>
         <%= f.label :tickets %>
+        <%= f.number_field :tickets %>%
     </div>  
 
+   
     <div>
         <%= f.label :admin %>
     </div>
+
+      <div>    
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    </div>
+
+
   
+    <div>
     <%= f.submit class: 'btn btn-primary' %>
-<%= end %>
+    </div>
+
+<% end %>

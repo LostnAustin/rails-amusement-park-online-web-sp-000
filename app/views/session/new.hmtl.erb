@@ -1,0 +1,11 @@
+<%= form_tag('/session', method: :post) do %>
+
+    <div>
+        <%= collection_select(:user, :name, User.all, { :prompt => "Please select your user name" }) %>
+    </div>
+
+
+    <div>
+        <%= submit_tag('Sign In') %>
+    </div>
+<% end %>

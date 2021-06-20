@@ -22,6 +22,9 @@
          <%= f.number_field :happiness %>
     </div>
 
+  
+
+
     <div>
         <%= f.label :tickets %>
         <%= f.number_field :tickets %>%
@@ -30,9 +33,10 @@
    
     <div>
         <%= f.label :admin %>
+        <%= f.check_box :admin, class: 'form-check-input' %>
     </div>
 
-      <div>    
+    <div>    
         <%= f.label :password %>
         <%= f.password_field :password %>
     </div>
